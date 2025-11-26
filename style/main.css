@@ -1,7 +1,7 @@
 
 :root {
     --header-height: 100px;
-    --sidebar-width: 350px;
+    --sidebar-width: 20vw;
 
     --bg-color: #121212;
     --bg-color-header: #126912;
@@ -277,14 +277,32 @@ a.button:hover {
     background-color: var(--bg-button-hover);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     :root {
         --sidebar-width: 150px;
-        --header-height: 80px;
+        --header-height: 100px;
     }
 
     body{
         font-size: 1em;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin: 0;
+        margin-top: 1vh;
+    }
+
+    header .main-navigation a {
+        padding: 8px 25px;
+        margin-right: 0;
+        margin-left: 5px;
     }
 
     section .figure-section {
@@ -296,5 +314,11 @@ a.button:hover {
     section figure img {
         width: 50vw;
         height: 50vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .sidebar a {
+        font-size: 1em;
     }
 }
