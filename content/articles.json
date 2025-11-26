@@ -1,0 +1,30 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "title": "First Article",
+            "date": "2024-06-15",
+            "images": [
+                {
+                    "src": "first_image.jpg",
+                    "alt": "First example image",
+                    "caption": "This is a caption for the first image."
+                }
+            ],
+            "content": "This is the content of the first article."
+        },
+        {
+            "id": 2,
+            "title": "Second Article",
+            "date": "2024-06-20",
+            "images": [
+                {
+                    "src": "second_image.jpg",
+                    "alt": "Second example image",
+                    "caption": "This is a caption for the second image."
+                }
+            ],
+            "content": "This is the content of the second article."
+        }
+    ]
+}
