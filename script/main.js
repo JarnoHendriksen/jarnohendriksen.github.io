@@ -15,16 +15,12 @@ function loadArticles() {
             let articles = response.articles;
             createLinks(articles);
 
-            for (let art of articles) {
-                createArticle(art.id, art.title, art.images, art.content, art.source_link);
-            }
+            let first = true;
 
-            setTimeout(() => {
-                // Open the page with the topmost article
-                let sidebar = document.getElementsByClassName("sidebar")[0];
-                let topLink = sidebar.getElementsByTagName("a")[0];
-                switchArticles(topLink);
-            }, 500);            
+            for (let art of articles) {
+                createArticle(art.id, art.title, art.images, art.content, art.source_link, first);
+                first = false;
+            }           
         })
         .catch(error => console.error('Error loading articles:', error));
 
@@ -47,7 +43,7 @@ function setDarkMode(makeDark) {
         document.body.setAttribute("class", "");
 }
 
-function createArticle(id, title, images, content, source) {
+function createArticle(id, title, images, content, source, first) {
     let heading = document.createElement("h2");
     heading.appendChild(document.createTextNode(title));
 
@@ -88,6 +84,9 @@ function createArticle(id, title, images, content, source) {
     let article = document.createElement("div");
     article.setAttribute("id", id);
     article.setAttribute("class", "article-main");
+    if (!first){
+        article.style.display = "none";
+    }
 
     article.appendChild(heading);
     article.appendChild(figureSection);
