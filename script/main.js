@@ -19,10 +19,12 @@ function loadArticles() {
                 createArticle(art.id, art.title, art.images, art.content, art.source_link);
             }
 
-            // Open the page with the topmost article
-            let sidebar = document.getElementsByClassName("sidebar")[0];
-            let topLink = sidebar.getElementsByTagName("a")[0];
-            switchArticles(topLink);
+            setTimeout(() => {
+                // Open the page with the topmost article
+                let sidebar = document.getElementsByClassName("sidebar")[0];
+                let topLink = sidebar.getElementsByTagName("a")[0];
+                switchArticles(topLink);
+            }, 500);            
         })
         .catch(error => console.error('Error loading articles:', error));
 
