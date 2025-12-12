@@ -18,6 +18,11 @@ function loadArticles() {
             for (let art of articles) {
                 createArticle(art.id, art.title, art.images, art.content, art.source_link);
             }
+
+            // Open the page with the topmost article
+            let sidebar = document.getElementsByClassName("sidebar")[0];
+            let topLink = sidebar.getElementsByTagName("a")[0];
+            switchArticles(topLink);
         })
         .catch(error => console.error('Error loading articles:', error));
 
@@ -27,11 +32,6 @@ function loadArticles() {
     // for (let art of articles) {
     //     createArticle(art.id, art.title, art.images, art.content, art.source_link);
     // }
-
-    // Open the page with the topmost article
-    let sidebar = document.getElementsByClassName("sidebar")[0];
-    let topLink = sidebar.getElementsByTagName("a")[0];
-    switchArticles(topLink);
 }
 
 function setDarkMode(makeDark) {
@@ -99,7 +99,7 @@ function createArticle(id, title, images, content, source) {
 function switchArticles(e) {
     let link = undefined;
 
-    if (e.currentTarget === undefined)
+    if (e?.currentTarget === undefined)
         link = e;
     else
         link = e.currentTarget;
