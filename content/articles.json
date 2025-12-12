@@ -2,29 +2,44 @@
     "articles": [
         {
             "id": 1,
-            "title": "First Article",
-            "date": "2024-06-15",
+            "title": "FAIRSECO",
+            "date": "2023-02-01",
+            "source_link": "https://github.com/SecureSECO/FAIRSECO",
             "images": [
                 {
-                    "src": "first_image.jpg",
-                    "alt": "First example image",
-                    "caption": "This is a caption for the first image."
+                    "src": "fairseco_logo.jpg",
+                    "alt": "The FAIRSECO logo",
+                    "caption": "The FAIRSECO logo"
+                },
+                {
+                    "src": "fairseco.jpg",
+                    "alt": "A screenshot of the FAIRSECO dashboard",
+                    "caption": "The FAIRSECO dashboard."
                 }
             ],
             "content": "This is the content of the first article."
         },
         {
             "id": 2,
-            "title": "Second Article",
+            "title": "Disaster Mayor",
             "date": "2024-06-20",
+            "source_link": "",
             "images": [
                 {
-                    "src": "second_image.jpg",
+                    "src": "disaster_mayor.jpg",
                     "alt": "Second example image",
                     "caption": "This is a caption for the second image."
                 }
             ],
             "content": "This is the content of the second article."
+        },
+        {
+            "id": 3,
+            "title":"3D Object Retrieval System",
+            "date": "2024-11-09",
+            "source_link": "https://github.com/Ophel1aLee/MR_Project",
+            "images": [],
+            "content": "content"
         }
     ]
 }

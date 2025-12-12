@@ -108,6 +108,7 @@ body.dark-mode {
     --link-color: var(--clr-light-a0);
     --link-color-hover: var(--clr-primary-a30);
     --bg-button: var(--clr-primary-a0);
+    --fg-button: var(--clr-light-a0);
     --bg-button-hover: var(--clr-primary-a10);
 }
 
@@ -124,6 +125,7 @@ body:not(.dark-mode) {
     --link-color: var(--clr-dark-a0);
     --link-color-hover: var(--clr-primary-a21);
     --bg-button: var(--clr-primary-a1);
+    --fg-button: var(--clr-light-a0);
     --bg-button-hover: var(--clr-primary-a11);
 }
 
@@ -157,6 +159,11 @@ header h1 {
     padding: 14px 20px;
     background-color: var(--bg-header-button);
     margin-right: 15px;
+    text-align: center;
+}
+
+.main-navigation a i {
+    font-size: 0.8em;
 }
 
 .main-navigation a:hover {
@@ -265,12 +272,13 @@ a.button {
     background-color: var(--bg-button);
     padding: 20px;
     border-radius: 10px;
-    color: var(--text-color);
+    color: var(--fg-button);
     margin: 20px 5px;
     float: left;
     cursor: pointer;
     font-weight: bold;
     font-size: 1.3em;
+    text-decoration: none;
 }
 
 a.button:hover {
@@ -303,6 +311,18 @@ a.button:hover {
         padding: 8px 25px;
         margin-right: 0;
         margin-left: 5px;
+    }
+
+    .main-navigation a i {
+        margin: 0;
+    }
+
+    .main-navigation .page-btn {
+        width: 18vw;
+    }
+
+    .main-navigation .dark-mode-btn {
+        width: 3vw;
     }
 
     section .figure-section {
