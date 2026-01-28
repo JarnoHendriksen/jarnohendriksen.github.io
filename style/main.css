@@ -45,7 +45,7 @@ main {
 
 .titlebar h1 {
     margin: 0;
-    margin-left: 1vw;
+    margin-left: 20px;
     color: var(--title-color);
     font-size: 1.2em;
 }
@@ -196,6 +196,7 @@ section h2 {
 
     .images img {
         margin-bottom: 5px;
+        width: 80%;
     }
 
     .images .images_padding {
