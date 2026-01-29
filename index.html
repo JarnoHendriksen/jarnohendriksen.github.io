@@ -16,7 +16,7 @@
         <main>
             <div class="titlebar">
                 <h1>Jarno Hendriksen - Portfolio</h1>
-                <div class="exit-btn">X</div>
+                <div class="exit-btn exit-btn-inactive">X</div>
             </div>
             <nav>
                 <a href="#" onclick="ShowSection('section_home')">Home</a>
@@ -57,31 +57,52 @@
                 <h3>S-Maze</h3>
                 <div class="images">
                     <div class="images_padding"></div>
-                    <img src="content/images/s-maze.png" alt="img"/>
-                    <img src="content/images/s-maze-screen.png" alt="img"/>
+                    <img src="content/images/s-maze.png" alt="img" onclick="ShowImgModal(this)" role="button" />
+                    <img src="content/images/s-maze-screen.png" alt="img" onclick="ShowImgModal(this)" role="button" />
                     <div class="images_padding"></div>
                 </div>
                 <p>A project for the course Sound and Music Technology, together with Themis Andreopoulos, Nick Jansen, Anna Kołodziejczyk, Franka van der Salm and Andrea Suklan. Main contributions include maze generation, audio system, UI design.</p>
+<hr>
+                <h3>The Unusual Suspects</h3>
+                <div class="images">
+                    <div class="images_padding"></div>
+                    <img src="content/images/unusualsuspects-carol.png" alt="img" onclick="ShowImgModal(this)" role="button" />
+                    <img src="content/images/unusualsuspects-quincy.png" alt="img" onclick="ShowImgModal(this)" role="button" />
+                    <div class="images_padding"></div>
+                </div>
+                <p>A game made for the course AI Content Generation together with YingLun Pu and Pjotr Straathof. The game includes AI generated 3D models and music, and the responses from the characters are powered by an LLM.</p>
 
                 <hr>
                 <h3>3D Object Retrieval System</h3>
                 <div class="images">
                     <div class="images_padding"></div>
-                    <img src="content/images/unavailable.png" alt="img"/>
+                    <img src="content/images/unavailable.png" alt="img" onclick="ShowImgModal(this)" role="button" />
                     <div class="images_padding"></div>
                 </div>
                 <p>A project for the course Multimedia Retrieval, together with Ophelia Lee. Database of feature vectors of 3D objects from object database. Extract features from query object and retrieve k most similar objects from the database.</p>
 
                 <hr>
-                <h3>Ray Tracer / Path Tracer</h3>
+                <h3>Ray Tracer</h3>
                 <div class="images">
                     <div class="images_padding"></div>
-                    <img src="content/images/unavailable.png" alt="img"/>
-                    <img src="content/images/unavailable.png" alt="img"/>
+                    <img src="content/images/rt.png" alt="img" onclick="ShowImgModal(this)" role="button" />
+                    <img src="content/images/rt-2.png" alt="img" onclick="ShowImgModal(this)" role="button" />
                     <div class="images_padding"></div>
                 </div>
-                <p>A real-time path tracer based on the Ray Tracer series by The Cherno. Scene with spheres with different materials. Will be expanded with triangle meshes and acceleration structures.</p>
+                <p>A real-time ray tracer based on the Ray Tracer series by The Cherno. Scene with spheres with different materials. Will be expanded with multiple primary rays per pixel for anti-aliasing, triangle mesh support, textures and acceleration structures.</p>
             </section>
         </main>
+
+        <div id="image-viewer-parent">
+            <div id="image-viewer">
+                <div class="titlebar">
+                    <h1>Test</h1>
+                    <a href="#" class="exit-btn" onclick="HideImgModal()">X</a>
+                </div>
+                <div class="img-viewer-img-wrapper">
+                <img id="img-viewer-img" src="content/images/rt.png" alt="rt" />
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -13,3 +13,18 @@ function ShowSection(id) {
             s.style.display = "none";
     }
 }
+
+function ShowImgModal(imgElement) {
+    let imgSrc = imgElement.getAttribute("src");
+
+    let img = document.getElementById("img-viewer-img");
+    img.setAttribute("src", imgSrc);
+
+    let imgModal = document.getElementById("image-viewer-parent");
+    imgModal.style.display = 'flex';
+}
+
+function HideImgModal() {
+    let imgModal = document.getElementById("image-viewer-parent");
+    imgModal.style.display = 'none';
+}
